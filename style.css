@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d6f0f7;
+    color: #2e2e2e;
+}
+
+.link-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f7bab8;
+}
+
+.links-list {
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.links-list a {    
+    text-decoration: none;
+    color: #2e2e2e;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(https://wallpapercave.com/wp/wp4030451.jpg);
+    background-size: cover;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.presentation-text-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 0 2em;
+}
+
+.presentation-container {
+    width: 65%;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.presentation-text {
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 200;
+    font-size: 3em;
+}
+
+.presentation-name {    
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 4.5em;
+}
+
+.caro-img {
+    border-radius: 50%;
+    height: 480px;
+}
+
+.mouse {
+    height: 60px;
+    width: 40px;
+    border: 2px solid #2e2e2e;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.dot {
+        position: relative;
+        display: block;
+        top: 29%;
+        left: 50%;
+        width: 6px;
+        height: 6px;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        background-color: #2e2e2e;
+        border-radius: 50%;
+        -webkit-animation: ani-mouse 2.4s linear infinite;
+        animation: ani-mouse 2.4s linear infinite;
+}
+
+.scroll {
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 600;
+    font-size: 1em;
+    margin: 2px auto;
+}
+
+@keyframes ani-mouse {
+    0% {
+        opacity: 1;
+        top: 29%;
+    }
+
+    20% {
+        opacity: 1;
+        top: 65%;
+    }
+
+    50% {
+        opacity: 0;
+        top: 65%;
+    }
+
+    100% {
+        opacity: 0;
+        top: 29%;
+    }
+}
+
+.contact-title {
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 600;
+    font-size: 1.5em
+}
+
+.contact-container {
+    position: fixed;
+    z-index: 100;
+    top: 80%;
+    left: 96.5vw;
+    background-color: #f7bab8;
+    border-radius: 15px;
+    padding: 10px 10px 10px 0;
+    height: 15%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.menu-rrss {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.a-rrss {
+    text-decoration: none;
+    color: #2e2e2e;
+    font-family: 'Quicksand', sans-serif;
+}
+
+i {
+    margin: 10px;
+}
