@@ -4,14 +4,25 @@
 }
 
 body {
-    background-color: #d6f0f7;
-    color: #2e2e2e;
+    width: 100%;
+    margin: 0;
+    background: #ffffff;
+    background-image: linear-gradient(to right top, hsla(0, 5%, 15%, 0.363), #ffffff);
+    color: #474747;
 }
 
 .link-nav {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: #f7bab8;
+    background: rgba( 255, 255, 255, 0.5 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .links-list {
@@ -21,21 +32,27 @@ body {
     justify-content: space-evenly;
 }
 
-.links-list a {    
+.links-list a, .contact-bttn { 
+    border: none;   
     text-decoration: none;
-    color: #2e2e2e;
+    color: #474747;
     font-family: 'MuseoModerno', cursive;
     font-weight: 600;
     font-size: 1.5em;
 }
 
+.contact-bttn {
+    background-color: transparent;
+}
+
 header {
+    padding-top: 3em;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     background-image: url(https://wallpapercave.com/wp/wp4030451.jpg);
     background-size: cover;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .presentation-text-img {
@@ -47,7 +64,7 @@ header {
 }
 
 .presentation-container {
-    width: 65%;
+    width: 60%;
     padding-bottom: 2em;
     display: flex;
     flex-direction: column;
@@ -63,18 +80,18 @@ header {
 .presentation-name {    
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
-    font-size: 4.5em;
+    font-size: 4em;
 }
 
-.caro-img {
+.caro-img {    
+    height: 380px;
     border-radius: 50%;
-    height: 480px;
 }
 
 .mouse {
     height: 60px;
     width: 40px;
-    border: 2px solid #2e2e2e;
+    border: 2px solid #474747;
     border-radius: 20px;
     margin: 0 auto;
 }
@@ -88,7 +105,7 @@ header {
         height: 6px;
         -webkit-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
-        background-color: #2e2e2e;
+        background-color: #474747;
         border-radius: 50%;
         -webkit-animation: ani-mouse 2.4s linear infinite;
         animation: ani-mouse 2.4s linear infinite;
@@ -99,6 +116,124 @@ header {
     font-weight: 600;
     font-size: 1em;
     margin: 2px auto;
+}
+
+
+.contact-title {
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 600;
+    font-size: 1.5em
+}
+
+.contact-container {
+    position: fixed;
+    z-index: 100;
+    top: 80%;
+    left: 96.5vw;
+    background-color: #f7bab8;
+    border-radius: 15px;
+    padding: 10px 10px 10px 0;
+    height: 15%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 0.5s ease-out;
+    background: rgba( 255, 255, 255, 0.5 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.contact-container:hover, .contact-container:focus {
+    transform: translateX(-190px);
+}
+
+.menu-rrss {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.a-rrss {
+    text-decoration: none;
+    color: #474747;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+}
+
+i {
+    margin: 10px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em;
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/021/647/877/large/matias-z-render.jpg?1572449115);
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.projects-title {
+    font-family: 'MuseoModerno', cursive;
+    color: #f5f5f5;
+    text-shadow: -1px -1px 2px rgba(150, 150, 150, 1);
+    font-size: 3em;
+    align-self: flex-start;
+
+}
+
+.projects-links-container {
+    display: flex;
+    flex-wrap:wrap;
+    margin: auto;
+    margin-bottom: 2rem;
+    width: 80%;
+    font-size: 17px;  
+    height: 100vh;  
+    
+}
+
+.projects-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    border: 1px solid #c6d4df;
+    border-radius: 20px;
+    padding: 5%;
+    box-sizing: border-box;
+    width: 30%;
+    height: 30%;
+    color: #474747;
+    transition: all 0.5s ease-in;
+    background-color: #f5f5f5;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} 
+    
+.projects-card:hover {
+    border-color: #c6d4df;    
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transform: translateZ(3px);
+}
+
+.projects-text {
+    text-align: center;
+    margin-top:1rem;
+    box-sizing: content-box;
+    font-size: 17px;
+}
+
+.img-projects {
+    width: 90%;
+    height: 90%;
+    min-width: 0;
+    
 }
 
 @keyframes ani-mouse {
@@ -121,40 +256,4 @@ header {
         opacity: 0;
         top: 29%;
     }
-}
-
-.contact-title {
-    font-family: 'MuseoModerno', cursive;
-    font-weight: 600;
-    font-size: 1.5em
-}
-
-.contact-container {
-    position: fixed;
-    z-index: 100;
-    top: 80%;
-    left: 96.5vw;
-    background-color: #f7bab8;
-    border-radius: 15px;
-    padding: 10px 10px 10px 0;
-    height: 15%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.menu-rrss {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-.a-rrss {
-    text-decoration: none;
-    color: #2e2e2e;
-    font-family: 'Quicksand', sans-serif;
-}
-
-i {
-    margin: 10px;
 }
