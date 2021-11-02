@@ -1,31 +1,32 @@
-// const sideMenu = document.getElementById("contact-container");
-// const contactButton = document.getElementById("contact-bttn");
-// let animationCounter = 0
-// let sideMenuPosition = 0
+const sideMenu = document.getElementById("contact-container");
+const contactButton = document.getElementById("contact-bttn");
+let animationCounter = 0
+let sideMenuPosition = 0
+let startInterval
 
-// const animateSideMenu = () => {
-//     sideMenu.style.transition = ""
-//     if (animationCounter < 2) {
-//         animationCounter ++
-//         sideMenuPosition += 2
-//         sideMenu.style.left -= sideMenuPosition + 'vw'
-//     } 
-//     else if (animationCounter >= 2 && animationCounter <4){
-//         animationCounter ++
-//         sideMenuPosition -= 2
-//         sideMenu.style.right += sideMenuPosition + 'vw'
-//     }
-//     else {
-//         clearInterval()
-//         sideMenu.style.transition = "0.5s ease-out"
-//         sideMenu.style.right = "";
-//         animationCounter = 0
-//     }
-    
-// }
+const setAnimationCounter = () => {
+    animationCounter = 0
+    console.log("poner contador a cero")
+}
 
-// const setTimeAnimation = () => {
-//     setInterval(animateSideMenu, 1000);
-// }
+const countAnimationTime = () => {
+    animationCounter ++
+    if (animationCounter >= 3) {
+        clearInterval(startInterval)
+        sideMenu.classList.remove("fake-hover")
+    }
+    console.log("contar tiempo")
+}
 
-// contactButton.addEventListener('click', setTimeAnimation)
+const showContactMenu = () => {
+    sideMenu.classList.add("fake-hover")   
+    console.log("mostrar") 
+}
+
+const setTimeAnimation = () => {
+    startInterval = setInterval(countAnimationTime, 1000);
+}
+
+contactButton.addEventListener('click', setTimeAnimation)
+contactButton.addEventListener('click', showContactMenu)
+contactButton.addEventListener('click', setAnimationCounter)

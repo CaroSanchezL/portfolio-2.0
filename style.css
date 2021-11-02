@@ -6,23 +6,20 @@
 body {
     width: 100%;
     margin: 0;
-    background: #ffffff;
-    background-image: linear-gradient(to right top, hsla(0, 5%, 15%, 0.363), #ffffff);
     color: #474747;
 }
 
 .link-nav {
     position: fixed;
+    z-index: 100;
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #f7bab8;
     background: rgba( 255, 255, 255, 0.5 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .links-list {
@@ -53,6 +50,8 @@ header {
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     background-image: url(https://wallpapercave.com/wp/wp4030451.jpg);
     background-size: cover;
+    position: relative;
+    z-index: 3;
 }
 
 .presentation-text-img {
@@ -74,7 +73,7 @@ header {
 .presentation-text {
     font-family: 'MuseoModerno', cursive;
     font-weight: 200;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .presentation-name {    
@@ -82,6 +81,160 @@ header {
     font-weight: 500;
     font-size: 4em;
 }
+
+.description {
+    display: flex;
+    flex-wrap: nowrap;    
+}
+
+/* .static-description {
+    width: 70%;
+} */
+
+.container-flip {
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    display: inline-block;
+    width: 40%;
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 200;
+    font-size: 2.5em;
+    margin-left: 0.3em;
+}
+
+.container-flip span {
+    position: absolute;
+    white-space: nowrap;
+    opacity: 0;
+    -webkit-animation: rotate-word 20s linear infinite;
+            animation: rotate-word 20s linear infinite;
+    text-decoration: underline solid #474747 2px;
+  }
+  
+  .container-flip span:nth-child(2) {
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+  }
+  
+  .container-flip span:nth-child(3) {
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+  }
+  
+  .container-flip span:nth-child(4) {
+    -webkit-animation-delay: 7.5s;
+            animation-delay: 7.5s;
+  }
+  
+  .container-flip span:nth-child(5) {
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+  }
+  
+  .container-flip span:nth-child(6) {
+    -webkit-animation-delay: 12.5s;
+            animation-delay: 12.5s;
+  }
+  
+  .container-flip span:nth-child(7) {
+    -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+  }
+  
+  .container-flip span:nth-child(8) {
+    -webkit-animation-delay: 17.5s;
+            animation-delay: 17.5s;
+  }
+  
+  @-webkit-keyframes rotate-word {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
+    }
+    4% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    19% {
+      opacity: 0;
+    }
+    20% {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes rotate-word {
+    0% {
+      opacity: 0;
+    }
+    1% {
+      -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
+    }
+    4% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    19% {
+      opacity: 0;
+    }
+    20% {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .flip {
+    width: 100%;
+  }
+  
+  .flip::after {
+    content: '';
+    display: inline-block;
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+  }
+
+
+
 
 .caro-img {    
     height: 380px;
@@ -91,9 +244,13 @@ header {
 .mouse {
     height: 60px;
     width: 40px;
-    border: 2px solid #474747;
     border-radius: 20px;
     margin: 0 auto;
+    background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 2px solid rgba(65, 63, 63, 0.329);
 }
 
 .dot {
@@ -105,10 +262,10 @@ header {
         height: 6px;
         -webkit-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
-        background-color: #474747;
+        background-color: rgba(65, 63, 63, 0.719);
         border-radius: 50%;
-        -webkit-animation: ani-mouse 2.4s linear infinite;
-        animation: ani-mouse 2.4s linear infinite;
+        -webkit-animation: mouse 2.4s linear infinite;
+        animation: mouse 2.4s linear infinite;
 }
 
 .scroll {
@@ -117,7 +274,6 @@ header {
     font-size: 1em;
     margin: 2px auto;
 }
-
 
 .contact-title {
     font-family: 'MuseoModerno', cursive;
@@ -130,21 +286,22 @@ header {
     z-index: 100;
     top: 80%;
     left: 96.5vw;
-    background-color: #f7bab8;
-    border-radius: 15px;
     padding: 10px 10px 10px 0;
     height: 15%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     transition: 0.5s ease-out;
     background: rgba( 255, 255, 255, 0.5 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .contact-container:hover, .contact-container:focus {
+    transform: translateX(-190px);
+}
+
+.fake-hover {
     transform: translateX(-190px);
 }
 
@@ -161,6 +318,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     color: #474747;
     font-family: 'Quicksand', sans-serif;
     display: flex;
+    align-items:center
 }
 
 i {
@@ -179,14 +337,27 @@ i {
 }
 
 .projects-title {
-    font-family: 'MuseoModerno', cursive;
-    color: #f5f5f5;
-    text-shadow: -1px -1px 2px rgba(150, 150, 150, 1);
-    font-size: 3em;
-    align-self: flex-start;
-
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-self:flex-start;
 }
 
+.title-text {
+    font-family: 'MuseoModerno', cursive;
+    color: #f5f5f5;
+    text-shadow: -1px -1px 2px rgba( 31, 38, 135, 0.37 );
+    font-size: 3em;
+}
+
+.title-underline {
+    position: relative;
+    left: -50;
+    width: 500px;
+    height: 5px;
+    background-color: #f5f5f5;
+    margin: 0;
+}
 .projects-links-container {
     display: flex;
     flex-wrap:wrap;
@@ -211,9 +382,9 @@ i {
     width: 30%;
     height: 30%;
     color: #474747;
-    transition: all 0.5s ease-in;
+    transition: all 0.3s ease-in;
     background-color: #f5f5f5;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 } 
     
 .projects-card:hover {
@@ -236,7 +407,7 @@ i {
     
 }
 
-@keyframes ani-mouse {
+@keyframes mouse {
     0% {
         opacity: 1;
         top: 29%;
@@ -257,3 +428,9 @@ i {
         top: 29%;
     }
 }
+
+.about-me {
+    background-image:url(https://www.xtrafondos.com/wallpapers/audifonos-en-rosa-y-azul-pastel-3844.jpg);
+}
+
+
