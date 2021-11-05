@@ -458,4 +458,66 @@ i {
     margin: 0;
 }
 
+.abt-description {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+}
+
+.personal-details {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  border: 1px solid #c6d4df;
+  border-radius: 20px;
+  padding: 5%;
+  box-sizing: border-box;
+  width: 50%;
+  min-height: 50%;
+  color: #474747;
+  transition: all 0.3s ease-in;
+  background-color: #f5f5f5;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} 
+
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 1em;
+  color: #e59c9e;
+}
+
+.tools-container, .learn-container {
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5em;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.icon-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0.5em;
+}
+
+.tool-icon {
+  font-size: 1.5em;
+  width: 120px;
+  color: #e59c9e
+}
+
+.tool-text {
+  width: 120px;
+}
+
+.learn-container {
+  width: 80%
+}
+
 

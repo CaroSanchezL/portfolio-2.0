@@ -30,3 +30,4 @@ const setTimeAnimation = () => {
 contactButton.addEventListener('click', setTimeAnimation)
 contactButton.addEventListener('click', showContactMenu)
 contactButton.addEventListener('click', setAnimationCounter)
+
