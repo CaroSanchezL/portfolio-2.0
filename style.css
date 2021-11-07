@@ -245,6 +245,11 @@ header {
     border-radius: 50%;
 }
 
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .mouse {
     height: 60px;
     width: 40px;
@@ -299,6 +304,64 @@ header {
       opacity: 0;
       top: 29%;
   }
+}
+
+/*---------------------------------------Breakpoint 1372px-------------------------------------------*/
+
+@media screen and (max-width: 1372px) {
+
+  header {
+    padding-top: 0;
+    height: 100vh;
+    justify-content: space-between;
+  }
+
+   .presentation-text-img {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .presentation-container, .flip {
+    width: 100%;
+  }
+
+  .presentation-text, .presentation-name, .description, .container-flip, .flip {
+    text-align: center;
+  }
+
+  .description {
+    width: 100%;
+    flex-direction: column;
+    margin-left: auto;
+    justify-content: center;
+  }
+
+  .container-flip {
+    overflow: visible;
+    align-self: flex-start;
+    display: block;
+    width: 50%;
+  }
+
+  .caro-img {
+    margin-top: 4em;
+    height: 200px;
+  }
+
+}
+
+/*------------------------------------------Breakpoint 525px------------------------------------------*/
+
+@media screen and (max-width: 1372px) {
+header {
+  height: 125vh;
+}
+
+.caro-img {
+  margin-top: 3em;
+}
+
 }
 
 /*-------------------------------------------------------CONTACT-----------------------------------------------------------*/
@@ -527,5 +590,7 @@ i {
 .learn-container {
   width: 80%
 }
+
+/*---------------------------------------------------MEDIA QUERIES----------------------------------------*/
 
 
